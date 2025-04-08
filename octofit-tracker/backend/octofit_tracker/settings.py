@@ -26,6 +26,7 @@ SECRET_KEY = "django-insecure-^zfighmt_z)h4sgiygl(qw%ee2rr%5%69r8u%^7k1q-=+*-&_6
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS += ["improved-goldfish-7vxp49jrpxj3r4p-8000.app.github.dev", "localhost"]
 
 
 # Application definition
@@ -83,6 +84,13 @@ DATABASES = {
         "NAME": "octofit_db",
         "HOST": "localhost",
         "PORT": 27017,
+    }
+}
+
+# Add this option to improve compatibility with djongo
+DJONGO_SQL_TRANSLATOR = {
+    "sql": {
+        "ORDER BY": "",
     }
 }
 
